@@ -1,0 +1,4 @@
+﻿  P4Q4.cpp
+C:\Users\User\Desktop\DSPC (P)\P4\P4Q4\P4Q4\P4Q4.cpp(9,16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\User\Desktop\DSPC (P)\P4\P4Q4\P4Q4\P4Q4.cpp(14,16): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  P4Q4.vcxproj -> C:\Users\User\Desktop\DSPC (P)\P4\P4Q4\Debug\P4Q4.exe
