@@ -1,2 +1,2 @@
 # DSPC--P-
- Distribution Systems and Paralle Computing - Practical
+ Distribution Systems and Parallel Computing - Practical
