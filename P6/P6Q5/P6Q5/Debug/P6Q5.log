@@ -1,0 +1,3 @@
+﻿  P6Q5.cpp
+C:\Users\User\Desktop\DSPC (P)\P6\P6Q5\P6Q5\P6Q5.cpp(41,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  P6Q5.vcxproj -> C:\Users\User\Desktop\DSPC (P)\P6\P6Q5\Debug\P6Q5.exe
