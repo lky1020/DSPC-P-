@@ -1,0 +1,77 @@
+﻿  Compiling CUDA source file kernel.cu...
+  
+  C:\Users\User\Desktop\DSPC (P)\P8\P8Q2\P8Q2>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin\nvcc.exe" -gencode=arch=compute_52,code=\"sm_52,compute_52\" --use-local-env -ccbin "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.28.29333\bin\HostX86\x64" -x cu   -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include"  -G   --keep-dir x64\Debug  -maxrregcount=0  --machine 64 --compile -cudart static  -g  -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Fdx64\Debug\vc142.pdb /FS /Zi /RTC1 /MDd " -o x64\Debug\kernel.cu.obj "C:\Users\User\Desktop\DSPC (P)\P8\P8Q2\P8Q2\kernel.cu" 
+  kernel.cu
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include\thrust/system/cuda/detail/reduce.h(945): warning C4244: 'initializing': conversion from 'Size' to 'thrust::detail::int32_t', possible loss of data
+          with
+          [
+              Size=size_type
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include\thrust/system/cuda/detail/reduce.h(1021): note: see reference to function template instantiation 'T thrust::cuda_cub::detail::reduce_n_impl<thrust::cuda_cub::tag,InputIt,Size,T,BinaryOp>(thrust::cuda_cub::execution_policy<thrust::cuda_cub::tag> &,InputIt,Size,T,BinaryOp)' being compiled
+          with
+          [
+              T=int,
+              InputIt=thrust::detail::normal_iterator<thrust::device_ptr<int>>,
+              Size=size_type,
+              BinaryOp=thrust::plus<int>
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include\thrust/system/cuda/detail/reduce.h(1041): note: see reference to function template instantiation 'T thrust::cuda_cub::reduce_n<thrust::cuda_cub::tag,InputIt,size_type,T,BinaryOp>(thrust::cuda_cub::execution_policy<thrust::cuda_cub::tag> &,InputIt,Size,T,BinaryOp)' being compiled
+          with
+          [
+              T=int,
+              InputIt=thrust::detail::normal_iterator<thrust::device_ptr<int>>,
+              BinaryOp=thrust::plus<int>,
+              Size=size_type
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include\thrust/detail/reduce.inl(71): note: see reference to function template instantiation 'T thrust::cuda_cub::reduce<thrust::cuda_cub::tag,InputIterator,T,BinaryFunction>(thrust::cuda_cub::execution_policy<thrust::cuda_cub::tag> &,InputIt,InputIt,T,BinaryOp)' being compiled
+          with
+          [
+              T=int,
+              InputIterator=thrust::detail::normal_iterator<thrust::device_ptr<int>>,
+              BinaryFunction=thrust::plus<int>,
+              InputIt=thrust::detail::normal_iterator<thrust::device_ptr<int>>,
+              BinaryOp=thrust::plus<int>
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include\thrust/detail/reduce.inl(186): note: see reference to function template instantiation 'T thrust::reduce<DerivedPolicy,InputIterator,T,BinaryFunction>(const thrust::detail::execution_policy_base<DerivedPolicy> &,InputIterator,InputIterator,T,BinaryFunction)' being compiled
+          with
+          [
+              T=int,
+              DerivedPolicy=thrust::cuda_cub::tag,
+              InputIterator=thrust::detail::normal_iterator<thrust::device_ptr<int>>,
+              BinaryFunction=thrust::plus<int>
+          ]
+  C:/Users/User/Desktop/DSPC (P)/P8/P8Q2/P8Q2/kernel.cu(20): note: see reference to function template instantiation 'T thrust::reduce<thrust::detail::normal_iterator<thrust::device_ptr<T>>,int,thrust::plus<T>>(InputIterator,InputIterator,T,BinaryFunction)' being compiled
+          with
+          [
+              T=int,
+              InputIterator=thrust::detail::normal_iterator<thrust::device_ptr<int>>,
+              BinaryFunction=thrust::plus<int>
+          ]
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include\thrust/system/cuda/detail/reduce.h(973): warning C4244: 'initializing': conversion from 'Size' to 'thrust::detail::int32_t', possible loss of data
+          with
+          [
+              Size=size_type
+          ]
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include\cub\agent\../grid/grid_even_share.cuh(133): warning C4244: '=': conversion from 'OffsetT' to 'int', possible loss of data
+          with
+          [
+              OffsetT=__int64
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include\cub\agent\../grid/grid_even_share.cuh(128): note: while compiling class template member function 'void cub::GridEvenShare<__int64>::DispatchInit(OffsetT,int,int)'
+          with
+          [
+              OffsetT=__int64
+          ]
+  C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include\cub\device\dispatch/dispatch_reduce.cuh(519): note: see reference to function template instantiation 'void cub::GridEvenShare<__int64>::DispatchInit(OffsetT,int,int)' being compiled
+          with
+          [
+              OffsetT=__int64
+          ]
+  C:\Users\User\AppData\Local\Temp\tmpxft_00001bd8_00000000-7_kernel.cudafe1.stub.c(146): note: see reference to class template instantiation 'cub::GridEvenShare<__int64>' being compiled
+C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\include\cub\agent\../grid/grid_even_share.cuh(135): warning C4244: '=': conversion from 'OffsetT' to 'int', possible loss of data
+          with
+          [
+              OffsetT=__int64
+          ]
+     Creating library C:\Users\User\Desktop\DSPC (P)\P8\P8Q2\x64\Debug\P8Q2.lib and object C:\Users\User\Desktop\DSPC (P)\P8\P8Q2\x64\Debug\P8Q2.exp
+  P8Q2.vcxproj -> C:\Users\User\Desktop\DSPC (P)\P8\P8Q2\x64\Debug\P8Q2.exe
