@@ -66,7 +66,7 @@ int main()
                 {
                     int i; i = 1;
 
-                    #pragma omp single
+                    #pragma omp single // run one time only for the printf
                         {
                             printf(" num_threads = %d", omp_get_num_threads());
 

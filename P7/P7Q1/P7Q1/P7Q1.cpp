@@ -28,6 +28,7 @@ int main() {
     //   Loop over grid of points in the complex plane which contains the Mandelbrot set,
     //   testing each point to see whether it is inside or outside the set.
     omp_set_num_threads(8);
+    //eps initialized outside
 #pragma omp parallel for default(shared) firstprivate(eps) private (c, j)
     for (i = 0; i < NPOINTS; i++) {
         for (j = 0; j < NPOINTS; j++) {

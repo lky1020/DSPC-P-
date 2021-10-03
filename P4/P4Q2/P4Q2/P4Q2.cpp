@@ -19,16 +19,19 @@ int main()
     double start_time = omp_get_wtime();
 
     //Method 1
+    //Parallel it
     #pragma omp parallel
     {
         int id, nthrds;
         id = omp_get_thread_num();
         nthrds = omp_get_num_threads();
 
+        // use thread id
         for (i = id; i < MAX; i = i + nthrds) {
             ave += A[i];
         }
 
+        //allow one threads update the ave
         #pragma omp critical 
         {
             ave = ave / MAX;
@@ -36,6 +39,7 @@ int main()
     }
 
     // Method 2
+    //create local ave and add it to shared variable (no critical region)
     //#pragma omp parallel for reduction(+:ave)
     //{
     //    for (i = 0; i < MAX; i++) {

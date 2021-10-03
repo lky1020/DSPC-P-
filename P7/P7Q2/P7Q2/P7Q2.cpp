@@ -102,11 +102,15 @@ int main(int argc, char* argv[]) {
         }
 
         // do the work in parallel 
+        #pragma omp parallel
         {
+            #pragma omp single
             printf(" %d threads \n", omp_get_num_threads());
-            #pragma omp parallel for
+
+            #pragma omp for schedule(dynamic, 5)
             for (i = 0; i < count; i++)
                 processwork(parr[i]);
+
         }
     }
 

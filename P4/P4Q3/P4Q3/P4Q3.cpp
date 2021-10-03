@@ -21,14 +21,14 @@ int main()
     A = (double*)malloc(N * sizeof(double));
     runtime = omp_get_wtime();
     //The section construct is one way to distribute different tasks to different threads.
-#pragma omp parallel sections
+#pragma omp parallel sections //start with 's'
     {
 #pragma omp section
         {
             fill_rand(N, A);
 #pragma omp flush  
             flag = 1;
-#pragma omp flush (flag)
+#pragma omp flush (flag) // refresh flag in other threads (update)
         }
 #pragma omp section
         {

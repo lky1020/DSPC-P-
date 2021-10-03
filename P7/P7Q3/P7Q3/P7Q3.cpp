@@ -10,7 +10,7 @@ int main()
     int b = 2;
     int c = 4;
 
-#pragma omp parallel 
+#pragma omp parallel firstprivate(a)
     {
         a = a + b;
         printf("%i\n", a);

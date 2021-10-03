@@ -16,6 +16,7 @@ int main()
     omp_set_num_threads(NUM_THREADS);
     double start_time = omp_get_wtime();
 
+//Create local sum
 #pragma omp parallel private (sum)
     {
         int i, id, nthrds;
@@ -30,6 +31,7 @@ int main()
             sum += 4.0 / (1.0 + x * x);
         }
 
+        //Prevent race condition (only one thread can write shared variable)
         #pragma omp critical
         {
             pi += sum * step;
@@ -38,6 +40,7 @@ int main()
 
     double end_time = omp_get_wtime();
 
+    //This is for partial sum
     //for (i = 0, pi = 0.0; i < nthreads; i++) {
     //    pi += sum * step;
     //}
